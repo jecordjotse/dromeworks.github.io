@@ -1,1 +1,0 @@
-<?php  include('./inc/tabs.inc.php');?>

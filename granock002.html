@@ -2,187 +2,83 @@
 <html lang="en">
 <head>
 <!-- start content -->
-  <title>TEMPLATE</title>
+  <title>GRANOCK</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css">
-  <script>
-function getView(pid , custID){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-  if (xhttp.readyState == 4 && xhttp.status){
-  document.getElementById("shop").innerHTML = xhttp.responseText; 
-  }
-};
-  xhttp.open("GET", "./vws/products-view.vws.php?PID="+pid+"&id="+custID, false);
-  xhttp.send();
-}
-
-function add(){
-   document.getElementsById("NNN").innerHTML = "NOTHING";
-}
-
-function asdd(pid){
-
-  var qty = document.getElementByName("qty").value;
-  if(document.getElementById("AddBtn").value == 'ADD TO CART'){
-
-      var xhttp = new XMLHttpRequest();
-     // xhttp.onreadystatechange = function () {
-         //  if (xhttp.readyState == 4 && xhttp.status){
-           //        document.getElementById("AddBtn").innerHTML = xhttp.responseText; 
-             //}};
-  //xhttp.open("GET", "./gen/add2cart.gen.php?PID="+pid+"&qty="+qty, false);
-  //xhttp.send();
-    document.getElementById("AddBtn").innerHTML = "ADDED";
-  }else if(document.getElementById("AddBtn").value == 'SAVE CHANGES'){
-    //var xhttp = new XMLHttpRequest();
-    //xhttp.onreadystatechange = function () {
-      //     if (xhttp.readyState == 4 && xhttp.status){
-        //           document.getElementById("AddBtn").innerHTML = xhttp.responseText; 
-         // }};
- // xhttp.open("GET", "./gen/changeincart.gen.php?PID="+pid+"&qty="+qty, false);
-  //xhttp.send();
-   document.getElementById("AddBtn").innerHTML = "SAVED";
-  }else{
-   document.getElementById("AddBtn").innerHTML = "NOTHING";
-  }
-}
-
-function rem(pid){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-  if (xhttp.readyState == 4 && xhttp.status){
-  document.getElementById("shop").innerHTML = xhttp.responseText; 
-  }
-};
-  xhttp.open("GET", "./vws/products-view.vws.php?PID="+pid, false);
-  xhttp.send();
-}
-function edit(pid){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-  if (xhttp.readyState == 4 && xhttp.status){
-  document.getElementById("shop").innerHTML = xhttp.responseText; 
-  }
-};
-  xhttp.open("GET", "./vws/products-view.vws.php?PID="+pid, false);
-  xhttp.send();
-}
-
-</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 <!--  end content  -->
 </head>
 <body>
-<!-- start content -->
+<!-- start nav -->
+  <nav id="nav1" class="navbar navbar-inverse">
+    <div class="container-fluid navMob">
+      <div class="navbar-header row">
 
-<!-- <?php if(!isset($cust)){include('./vws/signin.vws.php');} ?> -->
-<!--  end content  -->
+        <a class="navbar-brand col-*-8" href="./" style="display: inline-block;width: 70%;padding: 1em">
+             <div id="klc" class="row">
+                  <div id="k" class="sq">GRANOCK</div>
+             </div>
+        </a>
+<!-- start mobile-tabs -->
+        <button type="button" class="navbar-toggle col-*-4" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+        </button>
+<!--  end mobile-tabs  -->
+
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" >
+<!-- start tabs -->
+        <ul class="nav navbar-nav n">
+                <li class="navActive"><a href="./">HOME</a></li>
+                <li><a href="branding">EMBROIDERY & PRINTING</a></li>
+                <li><a href="invites">INVITES</a></li>
+                <li><a href="tinatess">FUN GAME</a></li>
+                <li><a href="maintenance">MAINTENANACE</a></li>
+                <li><a href="about">ABOUT</a></li>
+                <li><a href="store">ONLINE STORE</a></li>
+        </ul>
+<!--  end tabs  -->
+      </div>
+    </div>
+  </nav>
+<!--  end nav  -->
 
 <!-- start header -->
-<nav id="nav" class="navbar navbar-inverse">
-  <div class="container-fluid navMob">
-    <div class="navbar-header">
-
-<!-- start mobile-tabs -->
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-</button>
-<!--  end mobile-tabs  -->
-
-<!-- start mobile-tabs -->
-<a class="navbar-brand" href="./">
-	<div id="klc">
-		<div id="k" class="sq">GRANOCK</div><div id="c" class="sq">Co</div>
-	</div>
-</a>
-<!--  end mobile-tabs  -->
-
-<div class="info cart">
-<!-- start info -->
-<!-- <?php include('./inc/info.inc.php'); ?> -->
-<!--  end info  -->
-</div>
-    </div>
-
-    <div class="collapse navbar-collapse" id="myNavbar" >
-
-<!-- start tabs -->
-<ul class="nav navbar-nav n">
-        <li class="navActive"><a href="./">HOME</a></li>
-        <li><a href="branding">EMBROIDERY & PRINTING</a></li>
-        <li><a href="invites">INVITES</a></li>
-        <li><a href="tinatess">FUN GAME</a></li>
-        <li><a href="maintenance">MAINTENANACE</a></li>
-        <li><a href="about">ABOUT</a></li>
-        <li><a href="store">ONLINE STORE</a></li>
-</ul>
-<!--  end tabs  -->
-
-<div class="info-full cart" >
-<!-- start info -->
-<!-- <?php include('./inc/info.inc.php'); ?> -->
-<!--  end info  -->
-</div>
-    </div>
-  </div>
-</nav>
+<header id="home" class="container crete center bg banner" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+  <a href="#content" ><span class="btnShop">EXPLORE</span></a>
+</header>
 <!--  end header  -->
 
-<!-- start banner -->
-<div id="home" class="bg banner" >
-<div class="row text-center">
-  <div class="col-md-12 text-color">
-    <p>some Text Here</p>
-  </div>
-</div>
-<div class="row text-center">
-  <div class="col-md-4 text-color ">
-  <h1>Some Text Here</h1></div>
-  <div class="col-md-4 text-color">
-  <h1>Some Text Here</h1></div>
-  <div class="col-md-4 text-color">
-  <h1>Some Text Here</h1></div>
-</div>  
-
-    <a href="#content"><span class="btnShop">EXPLORE</span></a>
-
-</div>
- </div>
-<!--  end banner  -->
-
-<!-- start content -->
+<!-- start sections -->
 <div id="content" class="content content-ind">
 
-<!-- start header -->
-<div class="page bg-color">    
+<!-- start section 1 -->
+<div class="page bg-color section">    
   <h3>COLLECTIONS</h3><br>
   <div class="row">
     <div class="col-sm-4">
       <img src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
     </div>
     <div class="col-sm-4"> 
       <img src="img/2.jpg" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
     </div>
     <div class="col-sm-4">
       <img src="img/3.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div>
-<!--  end header  -->
+<!--  end section 1  -->
 
-<!-- start header -->
-    <!-- Footer -->
-	<footer class="">
-      <div class="container">
-          <div class="row">
-          <div id="contact" class="page page-contact" style="border-width:1px">
-    <div class="container">
+
+<!--  start contact-section  -->
+<div id="contact" class="container section contact-section">
     <div class="row">
           <div class="col-md-10  col-md-offset-1">
         <div class="build title-page">
@@ -211,82 +107,28 @@ function edit(pid){
           <span class="glyphicon glyphicon-envelope"></span>
           <p>email@domain.com</p>
         </div>
-      </div>
     </div><!-- end row -->
   
     </div><!-- end container -->
-  </div>
-          </div>
-          <br>
-      <div id="MainInfo" class="row">
-        <div class="col-md-7">
-          <div class="row">
-            <div class="col-md-4">
-            <span class="lead">SERVICE</span>
-             <ul>
-             <li>Maintenace</li>
-             <li>Teaching</li>
-             <li>Investers & Contributors</li>
-             <li>Maintenace</li>
-             <li>Maintenace</li>             
-             </ul>
-           </div>
-            <div class="col-md-4">
-              <span class="lead">COMPANY</span>
-             <ul>
-             <li>About the Owner</li>
-             <li>Set a meeting</li>
-             <li>location</li>             
-             </ul>
-            </div>
-            <div class="col-md-4">
-              <span class="lead">SOCIAL MEDIA</span>
-             <ul>
-             <li class="glyphicon glyphicon-facebook">Facebook</li>
-             <li class="glyphicon glyphicon-facebook">Twitter</li>
-             <li class="glyphicon glyphicon-facebook">Instagram</li>
-             <li class="glyphicon glyphicon-facebook">Google+</li>           
-             </ul>
-            </div>
-          </div>
-        </div>
-        <div id="footer-signin" class="col-md-5">
-          <div id="login" class="container footer-signin">
-            <div class="row">
-                <div class="col-md-11"><span class="lead">Sign In To Place Order</span></div>
-                <div class="col-md-1"></div>
-            </div>
-              <form method="post" action="./reg">
-                <div class="row">
-                    <div class="col-md-6">
-                      <input required class="form-control input-lg fsignBtn" type="text" name="email" placeholder="email"></div>
-                    <div class="col-md-6">
-                      <input required class="form-control input-lg fsignBtn" type="password" name="pwd" placeholder="password"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12"><input class="lead btn form-control input-lg fsignBtn" type="submit" name="login" value="LogIn"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12"><span class="lead cr">Create Account<span class="glyphicon glyphicon-chevron-right"></span></span></div>
-                </div>
-              </form>
-          </div>
-        </div>
-        </div>
-        <div class="row" style="bottom:0;position:absolute">
-			<div class="col-md-12 text-left">
-				<div class="cp-right">
-					<p>&copy; 2016 <a href="#" class="color-primary linear">LOGO</a>. All Rights Reserved. | DESIGNED BY GRANOCK WEB</p>
-				</div><!-- end build -->
-			</div>
-        </div>
-      </div>
-    </footer>
-    <!-- /Footer -->
-<!--  end header  -->
+</div>
+<!--  end contact-section  -->
+
+<!--  start footer  -->
+<footer class="footer section">
+  <div class="xlarge">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-snapchat"></i>
+    <i class="fa fa-pinterest-p"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-linkedin"></i>
+ </div>
+<p>&copy; 2016 <a href="#" class="color-primary linear">LOGO</a>. All Rights Reserved. | DESIGNED BY GRANOCK WEB</p>
+</footer>
+<!--  end footer  -->
 
 </div>
-<!--  end content  -->
+<!--  end section  -->
 
 </body>
   <script src="js/jquery.min.js"></script>

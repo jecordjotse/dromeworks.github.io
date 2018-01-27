@@ -2,20 +2,13 @@
  	
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if($('.banner').is('#home')){
 
     if (y > 3) {
-        $('#nav').fadeIn();
-    } else $('#nav').fadeOut();
-    }
-   
-    var target = $('#signform').offset().top(); 
-    var offset =  $('#MainInfo').scrolltop();
+        $('#nav1').fadeIn();
+    } else $('#nav1').fadeOut();
 
-    if(100 == target){
-    $('#signin').hide();
 
-    }
+    
 });
 
 
@@ -89,7 +82,7 @@ $('.ct').hover(function () {
   if($('.banner').is('#home')){
   }else{
    $('.banner').animate({height:"100px"} , { queue:false , duration:1000});
-        $('#nav').fadeIn();
+        $('#nav1').fadeIn();
   }
 
 });

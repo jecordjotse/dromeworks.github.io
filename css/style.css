@@ -29,6 +29,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   vertical-align: middle;
+  font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 
@@ -42,7 +45,7 @@ background-position: center  center;
 background-attachment: fixed;
  }
 
-   #nav{ 
+   #nav1{ 
 position: fixed;
 opacity: 0.8;
 display: none;
@@ -54,6 +57,9 @@ border-radius: 0;
 height: 60px;
    }
 
+
+
+
    .nav a{
     font-size: 12px;
    }
@@ -63,15 +69,33 @@ height: 60px;
    }
 
    @media(min-width: 766px){
+
     div.info{
       display: none;
     }
+
+    .show-sm-screen{
+      display: none !important;
+    }
+
+    #myNavbar{
+      width: 100% !important
+    }
+
    }
    @media(max-width: 767px){
-   div.info{
+
+    div.info{
     margin-right: 30%
     }
 
+    .show-lg-screen{
+      display: none;
+    }
+
+    ul.nav li{
+      display: block !important;
+    }
     .navMob{
       margin-top: -5px; 
       background-color: #000;
@@ -174,23 +198,17 @@ height: 60px;
     }
 
     #k{
+      display: inline-block;
       color: #807a2b;
       content:'';
-      font-size: 50px;
-    }
-    #l{
-      border:2px solid #fff;
-      background-color: #fff;
-      color: #000;
-      height: 32px;
-      width: 32px;
+      font-size: 2em;
     }
     #c{
+      display: inline-block;
       border:1px solid #fff;
       border-left: none; 
       color: #fff;
       height: 32px;
-      width: 35px;
     }
 
       /******  PAGE   ********/
@@ -336,19 +354,45 @@ height: 60px;
    }
 
       /* Add a gray background color and some padding to the footer */
-    footer{
-      background-color: #000;
-      margin: 0;
-      height: 500px;
-      z-index: 999;
-    }
+   
+   .contact-section{
+  width: inherit;
+    color: #fff !important;
+    background-color: #000 !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    text-align: center !important;
+    opacity: 0.60;
+    padding: 0.01em 16px;
 
+}
+   
+
+   footer{
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    text-align: center !important;
+    opacity: 0.60;
+    padding: 0.01em 16px;
+        display: block;
+        box-sizing: inherit;
+        font-size: 15px;
+line-height: 1.5;
+}
+
+   }
     footer.bottom{
       position: relative;
       top: 100%;
       bottom:0;
     }
 
+.xlarge {
+  width: inherit;
+      padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-size: 24px !important;
+}
 
     .signBtn{
       margin: 1px;

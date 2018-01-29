@@ -57,8 +57,17 @@ border-radius: 0;
 height: 60px;
    }
 
+.content-subs {
+    width: 200px !important;
+    height: 200px;
+    border-radius: 100px !important;
+    padding: 10px;
+    margin: 50px;
+}
 
-
+div.row:nth-child(3) > div:nth-child(1), div.row:nth-child(3) > div:nth-child(2), div.row:nth-child(4) > div:nth-child(1), div.row:nth-child(4) > div:nth-child(2){
+  padding: 1% 10%;
+}
 
    .nav a{
     font-size: 12px;

@@ -12,7 +12,7 @@
 	<style type="text/css">
 #slider {
     width: inherit;
-    height: 500px;
+    height: inherit;
     margin: 0 auto;
 }
 
@@ -20,17 +20,18 @@
 </head>
 
 <body>
-<div id="slider">
+<header id="home" class="container crete center bg banner" style="padding:0">
+<div id="slider" >
 <!-- Start WOWSlider.com BODY section -->
-	<div id="wowslider-container1" class="wowslider-container">
-	<div class="ws_images"><ul>
+  <div id="wowslider-container1" class="wowslider-container">
+  <div class="ws_images"><ul>
 <li><img src="data1/images/1.jpg" alt="" title="" id="wows1_0"/></li>
 <li><img src="data1/images/2.jpg" alt="" title="" id="wows1_1"/></li>
 <li><img src="data1/images/3.jpg" alt="" title="" id="wows1_2"/></li>
 <li><img src="data1/images/4.jpg" alt="" title="" id="wows1_3"/></li>
 <li><img src="data1/images/5.jpg" alt="" title="" id="wows1_4"/></li>
 </ul></div>
-<div style="position: absolute;height: 70%;width: 50%;padding: 10px;float: right;top: 0px;z-index: 999;left: 25%;">
+<div class="headerBTN" >
   <h1 class="header-margin header-jumbo">START PAGE</h1>
   <a href="#content" ><span class="btnShop">EXPLORE</span></a>
 <div class="ws_bullets"><div>
@@ -41,8 +42,10 @@
 <a href="#" title=""><img src="data1/tooltips/5.jpg" alt=""/>5</a>
 </div></div>
   </div>
+</header>
 
-	</div>
+<div id="content" class="content" style="z-index: 10;">
+</div>
 	<script type="text/javascript" src="js/wowslider.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<!-- End WOWSlider.com BODY section -->

@@ -81,39 +81,7 @@
 <div id="content" class="content content-ind" style="z-index: 9999;">
 
 <!-- start section 1 -->
-<div class="page bg-color section">    
-  <h3>COLLECTIONS</h3><br>
-  <div class="row">
-    <div class="col-md-6">
-      <div>
-      <h3>embroidery</h3>
-
-    <a href="#">        <img class="content-subs" src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>      </div>
-    </div>
-    <div class="col-md-6">
-      <div>
-      <h3>invites</h3>
-    <a href="#">        <img class="content-subs" src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div>
-      <h3>screen printing</h3>
-
-    <a href="#">        <img class="content-subs" src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>      </div>
-    </div>
-    <div class="col-md-6">
-      <div>
-      <h3>fun game</h3>
-
-    <a href="#">        <img class="content-subs" src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>      </div>
-    </div>
-  </div>
-</div>
-<!--  end section 1  -->
-<div class="container section">
+<div class="page bg-color container section">
     <div class="row">
           <div class="col-md-10  col-md-offset-1">
         <div class="build title-page">
@@ -140,6 +108,29 @@ Ut fermentum ante vitae mi maximus consectetur. Cras eleifend, lectus vitae male
     </div><!-- end row -->
   <!-- end container -->
 </div>
+
+
+<div class="page container section">
+   <div id="map"></div>
+   <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDMQZjN9ts8Rp8Fxbkp441zDd6xOvdEIw&callback=initMap">
+    </script>
+
+</div>
+
 
 <!--  start contact-section  -->
 <div id="contact" class="container section contact-section">
